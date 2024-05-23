@@ -21,7 +21,7 @@ video_url <- c("https://www.youtube.com/watch?v=y83x7MgzWOA",
 "https://www.youtube.com/watch?v=2Vv-BfVoq4g")
 
 yt_data <- yt_auth |> Collect(videoIDs = video_url,
-                              maxComments = 500,
+                              maxComments = 750,
                               writeToFile = TRUE,
                               verbose = TRUE) # use 'verbose' to show download progress
 

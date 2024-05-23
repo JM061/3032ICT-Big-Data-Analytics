@@ -2,6 +2,7 @@
 library(spotifyr)
 library(ggplot2)
 library(ggridges)
+library(igraph)
 
 #data collection
 app_id <- "82ea56894caf45e0be8b8576799cd24c"
@@ -43,10 +44,10 @@ ggplot(ed_sheeran_audio_features, aes(x = energy, y = album_name)) +
   geom_density_ridges() +
   theme_ridges() +
   ggtitle("Energy in Ed Sheeran Albums",
-          subtitle = "Based on valence from Spotify's Web API")
+          subtitle = "Based on Energy from Spotify's Web API")
 
 #Find related Artists
-related_artists_es <- get_related_artists("6eUKZXaKkcviH0Ku9w2n3V")
+related_artists_es <- get_related_artists(Ed_Sheeran_ID)
 View(related_artists_es)
 
 
