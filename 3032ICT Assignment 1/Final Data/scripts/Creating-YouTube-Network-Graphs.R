@@ -64,9 +64,9 @@ yt_clean_text <- yt_data$Comment |>
   replace_internet_slang() |>
   replace_contraction() |>
   removeNumbers() |> 
-  removePunctuation()  # |> 
-  # replace_emoji() |> # optional
-  # replace_emoticon() # optional
+  removePunctuation()   |> 
+  replace_emoji() |> # optional
+  replace_emoticon() #|> # optional
 
 yt_clean_df <- data.frame(yt_clean_text)
 
